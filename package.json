@@ -6,9 +6,7 @@
     "private": true,
     "license": "gpl-2.0",
     "scripts": {
-        "start": "webpack serve --mode development",
-        "test": "jest",
-        "lint": "eslint src"
+        "start": "webpack serve --mode development"
     },
     "dependencies": {
         "@babel/runtime": "7.16.0",
