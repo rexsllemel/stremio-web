@@ -17,15 +17,6 @@ RUN apk update && apk upgrade && \
 WORKDIR /var/www/stremio-web
 COPY . .
 RUN npm install
-RUN npm run build
-
-# Bundle app source
-FROM base AS final
-
-WORKDIR /var/www/stremio-web
-COPY . .
-COPY --from=prebuild /var/www/stremio-web/node_modules ./node_modules
-COPY --from=prebuild /var/www/stremio-web/build ./build
-
 EXPOSE 8080
-CMD ["node", "http_server.js"]
+
+RUN npm start
