@@ -17,6 +17,6 @@ RUN apk update && apk upgrade && \
 WORKDIR /var/www/stremio-web
 COPY . .
 RUN npm install
-EXPOSE 8080
+EXPOSE 8081
 
 RUN npm start
