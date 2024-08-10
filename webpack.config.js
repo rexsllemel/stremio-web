@@ -155,11 +155,11 @@ module.exports = (env, argv) => ({
     },
     devServer: {
         host: '0.0.0.0',
+        allowedHosts: 'all',
         static: false,
         hot: false,
         server: 'https',
-        liveReload: false,
-        public: 'movies.faithcloud.net' 
+        liveReload: false
     },
     optimization: {
         minimize: true,
