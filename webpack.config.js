@@ -158,7 +158,8 @@ module.exports = (env, argv) => ({
         static: false,
         hot: false,
         server: 'https',
-        liveReload: false
+        liveReload: false,
+        public: 'movies.faithcloud.net' 
     },
     optimization: {
         minimize: true,
